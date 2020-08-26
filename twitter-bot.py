@@ -23,8 +23,11 @@ api = create_api()
 
 while True:
     user = api.get_user('itsarjundk')
-    api.update_profile(name=f'ARJUN|{follower_count(user)} Followers')
-    print(f'Updating Twitter Name : ARJUN|{follower_count(user)} Followers')
+    if follower_count(user) ==1:
+        api.update_profile(name=f'I HAVE ONLY {follower_count(user)} Follower')
+    else:
+        api.update_profile(name=f'I HAVE {follower_count(user)} Followers')
+    print(f'Updating Twitter Name : I HAVE {follower_count(user)} Followers')
     print('Waiting to refresh')
     time.sleep(60)
 
