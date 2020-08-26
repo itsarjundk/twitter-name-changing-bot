@@ -23,7 +23,7 @@ api = create_api()
 
 while True:
     user = api.get_user('itsarjundk')
-    if follower_count(user) ==1:
+    if follower_count(user) =="1️⃣":
         api.update_profile(name=f'I HAVE ONLY {follower_count(user)} Follower')
     else:
         api.update_profile(name=f'I HAVE {follower_count(user)} Followers')
